@@ -5,8 +5,8 @@ import { action } from '@ember/object';
 
 export default class ToggleMenuService extends Service {
     @tracked isOpen = false;
-    @tracked signup = true;
-    @tracked login = false;
+    @tracked login = true;
+    @tracked signup = false;
 
     @action loginMode(){
         this.login = true;

@@ -1,0 +1,62 @@
+    <div class="h-93vh grid grid-flow-row grid-cols-2">
+        {{!-- LEFT --}}
+        <div class="h-93vh hidden sm:flex col-span-1 justify-center items-center bg-cover bg-no-repeat" style="background-image: linear-gradient(rgba(0, 0, 0, 0.77), rgba(0, 0, 0, 0.77)) ,url(/assets/auth_bg.jpg);">
+            <div class="p-5 sm:p-20">
+                <h1 class="text-base sm:text-5xl font-nunito font-semibold text-gray-200"> Welcome,</h1>
+                <br>
+                <br>
+                <p class="text-sm sm:text-lg font-nunito text-gray-200">
+                    Devploy is a powerful tool for Continuous Integration and Continuous Deployment <br> 
+                    <br>✓ Continuous deployment 
+                    <br>✓ Automated testing
+                    <br>✓ Configurable environment
+                    <br>✓ Team Play
+                    <br>✓ Task Comments
+                    <br>✓ 24/7 support
+                    <br>
+                    <br>
+                    <br>                
+                    <p> <span class="font-nunito font-semibold">Sign up</span> to experience the super powers now !</p>
+                    <br>
+                    <br>
+                </p>
+                
+                
+            </div>
+            
+        </div>
+
+        {{!-- RIGHT --}}
+        <div class="h-93vh bg-cliq-body col-span-2 sm:col-span-1">
+            <div class="h-93vh w-full flex flex-col items-center justify-center">
+                
+
+                
+                <div  class="flex flex-col w-1/3">
+                    <div class="flex justify-center my-3">
+                        {{#if this.toggleMenu.signup}}
+                        <h1 class="text-2xl text-white">Register now</h1>
+                        {{/if}}
+                        {{#if this.toggleMenu.login}}
+                        <h1 class="text-2xl text-white">Login</h1>
+                        {{/if}}
+                    </div>
+
+                    <Input class="auth-fields" placeholder="username or email"></Input>
+                    <Input class="auth-fields" placeholder="password"></Input>
+                    <Input class="auth-fields {{if this.toggleMenu.login "hidden" ""}}" placeholder="confirm password"></Input>
+
+
+                    <div class="flex justify-center">
+                    <button class="pl-3.5 text-gray-200 mt-10 rounded-full transform transition duration-100 hover:font-bold hover:scale-110 focus:outline-none bg-cliq-body-dark h-12 w-12">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                    </button>
+                    </div>
+                </div>
+                {{!-- <div class="h-20"></div> --}}
+            </div>
+             
+            
+        </div>
+
+    </div>

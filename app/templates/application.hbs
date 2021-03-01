@@ -1,7 +1,8 @@
-{{page-title "EmberDevploy"}}
 
-{{!-- The following component displays Ember's default welcome message. --}}
-<WelcomePage />
-{{!-- Feel free to remove this! --}}
-
-{{outlet}}
+<div class="flex h-screen flex-col bg-red-800">
+  <SiteHeader />
+  {{!-- WEBSITE CONTENT GOES HERE --}}
+  <div class="bg-gray-200 flex flex-col flex-grow h-full">
+      {{outlet}}
+  </div>
+</div>

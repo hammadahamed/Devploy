@@ -20,7 +20,15 @@
         <div class="bg-gray-50 md:col-span-4 rounded-lg py-1 shadow-inner  h-half md:h-90vh" >
             {{!-- REST of the RIGHT SHOULD GO INSIDE THIS --}}
             <div class="overflow-x-scroll overflow-y-scroll scroller py-3 px-4 scoller h-41vh  md:h-90vh" >
-                <Home::Right />                
+                {{!-- <Home::Right />                 --}}
+                {{outlet}}
+                    
+                <LinkTo @route="home.right" >
+                <button class="rounded-full bg-blue-500 text-gray-200 p-3">
+                    -> right
+                </button>
+                </LinkTo>
+                
             </div>             
         </div>
         {{!-- RIGHT CONTENT +END+ --}}

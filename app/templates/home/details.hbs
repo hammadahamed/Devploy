@@ -1,0 +1,41 @@
+{{page-title this.model.title}}
+
+<div class="flex flex-col gap-1 px-4 sm:px-0 ">
+    
+    <div class="ml-2.5 mb-2">
+        <div class="text-sm text-gray-300 pl-1">
+            breadcrums
+        </div>
+
+        {{!-- title --}}
+        <div class="flex items-center gap-1">
+            <span>
+                <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>
+            </span>
+            <h1 class="font-bold font-nunito text-2xl">{{this.model.title}}</h1>
+        </div>
+
+        {{!-- branches --}}
+        <div class="w-max px-1 py-0.5 bg-sky-blue-light  rounded-sm text-sm transform scale-75">
+            branches
+        </div>
+
+        {{!-- Over-view --}}
+        <div>
+            <div class=" my-2 ml-1 border-b-2 border-gray-300 w-max">
+                <h1 class="font-nunito font-bold">Overview</h1>
+            </div>
+            <p class="text-sm mb-1 ml-2">{{this.model.desc}}</p>
+        </div>
+    </div>
+
+
+    {{!-- Tests Details list --}}
+    <Details::Tests  @test = {{this.model.attributes}}/>
+
+
+
+
+</div>
+
+{{outlet}}

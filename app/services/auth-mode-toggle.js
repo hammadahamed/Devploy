@@ -16,4 +16,5 @@ export default class AuthModeToggleService extends Service {
         this.signup = true;
         this.login = false;
     }
+
 }

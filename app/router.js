@@ -6,12 +6,19 @@ export default class Router extends EmberRouter {
   rootURL = config.rootURL;
 }
 
-Router.map(function () {  
+Router.map(function () {
   this.route('auth');
   this.route('home', function() {
-    this.route('right');
+    // here you can even remove the "right" from the right/:right_id
+    //  but, then should give the url as "home/<model or id>" in the browser 
+    this.route('details', {path : 'details/:details_id'});
+    this.route('loading');
   });
   this.route('about');
   this.route('contact');
+  this.route('loading');
   this.route('page-not-found', { path: '/*wildcard' });
+
+  this.route('error');
+  this.route('new-task');
 });

@@ -1,6 +1,6 @@
-    <div class="h-93vh grid grid-flow-row grid-cols-2">
+    <div class="h-full grid grid-flow-row grid-cols-2">
         {{!-- LEFT --}}
-        <div class="h-93vh hidden sm:flex col-span-1 justify-center items-center bg-cover bg-no-repeat" style="background-image: linear-gradient(rgba(0, 0, 0, 0.77), rgba(0, 0, 0, 0.77)) ,url(/assets/auth_bg.jpg);">
+        <div class="h-full hidden sm:flex col-span-1 justify-center items-center bg-cover bg-no-repeat" style="background-image: linear-gradient(rgba(0, 0, 0, 0.77), rgba(0, 0, 0, 0.77)) ,url(/assets/auth_bg.jpg);">
             <div class="p-5 sm:p-20">
                 <h1 class="text-base sm:text-5xl font-nunito font-semibold text-gray-200"> Welcome,</h1>
                 <br>
@@ -31,10 +31,9 @@
 {{!-- --------------------------------------------------------------------------------------------------------------------- --}}
 
         {{!-- RIGHT --}}
-        <div class="h-93vh bg-cliq-body col-span-2 sm:col-span-1">
-            <div class="h-93vh w-full flex flex-col items-center justify-center">
-                <Auth::Fields />
-                
+        <div class="h-full bg-cliq-body col-span-2 sm:col-span-1">
+            <div class="h-full w-full flex flex-col items-center justify-center">
+                <Auth::Fields />                
             </div>
              
             

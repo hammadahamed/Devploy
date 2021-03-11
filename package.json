@@ -21,7 +21,7 @@
     "start": "ember serve",
     "test": "npm-run-all lint test:*",
     "test:ember": "ember test",
-    "build-css":"tailwind build src/styles.css -o app/styles/app.css"
+    "build-css": "tailwind build src/styles.css -o app/styles/app.css"
   },
   "devDependencies": {
     "@ember/optional-features": "^2.0.0",
@@ -49,6 +49,7 @@
     "ember-resolver": "^8.0.2",
     "ember-source": "~3.24.0",
     "ember-template-lint": "^2.15.0",
+    "ember-truth-helpers": "^3.0.0",
     "ember-welcome-page": "^4.0.0",
     "eslint": "^7.17.0",
     "eslint-config-prettier": "^7.1.0",

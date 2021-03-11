@@ -6,12 +6,24 @@
 @tailwind utilities;
 
 .cl{
-    @apply hover:text-white cursor-pointer transform hover:scale-105 text-gray-100;
+    @apply hover:text-white cursor-pointer transform transition duration-200 hover:scale-105 text-gray-100;
 }
 
 .auth-fields{
     @apply text-sm py-2 px-3 my-3 rounded-full outline-none;
 
+}
+
+.task-detail-item{
+    @apply text-sm col-span-1 sm:col-span-1 bg-gray-50 p-1 flex items-center;
+}
+
+.project-active-item{
+    @apply text-green-500 font-semibold;
+}
+
+.project-active-item > div{
+    @apply bg-gray-100 transform translate-x-1 transition duration-200;
 }
 
 /* --------------- Custom Scroller -------------- */

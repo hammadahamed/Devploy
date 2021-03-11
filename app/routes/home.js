@@ -1,18 +1,20 @@
 import Route from '@ember/routing/route';
+import { action } from '@ember/object';
+
 
 export default class HomeRoute extends Route {
 
-  //  PAssing another model not working !!!!!! 
-
-  // usermodel() {
-  //   return {
-  //           title : "hmd",
-  //           customDescription : "formidable"
-  //         }
-  // }
+//   @action async loading(){
+//     console.log("loading check - home")
+// }
 
   async model() {
-    var tem =  await fetch("https://devploy.herokuapp.com/tasks").then((k) => k.json());
-    return {tem};
+    var modelData =  await fetch("https://devploy.herokuapp.com/tasks").then((k) => k.json());
+    // var modelData = await this.store.findAll('task');
+    var {data} = modelData;
+
+    console.log(modelData);
+    console.log(data);
+    return data;
   }
 }

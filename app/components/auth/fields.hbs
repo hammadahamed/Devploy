@@ -1,5 +1,4 @@
 <div  class="flex flex-col w-1/3">
-    <h1 class="text-white">hey - {{this.model}}</h1>
     <div class="flex flex-col items-center justify-center my-3">
         <img class="h-10" src="/assets/zoho_logo.png" alt="">
     </div>
@@ -20,9 +19,11 @@
 
 
         <div class="flex justify-center">
-        <button class="pl-3.5 text-gray-200 mt-10 shadow-md rounded-full transform transition duration-100 hover:font-bold hover:scale-110 focus:outline-none bg-cliq-body-dark h-12 w-12">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-        </button>
+        <LinkTo @route='home'>
+            <button class="pl-3.5 text-gray-200 mt-10 shadow-md rounded-full transform transition duration-100 hover:font-bold hover:scale-110 focus:outline-none bg-cliq-body-dark h-12 w-12">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+            </button>
+        </LinkTo>
         </div>
 
         <div class="flex justify-center my-3">
@@ -33,4 +34,5 @@
             <h1 class="text-sm text-gray-400">New user ? <i {{ on 'click' this.authModeToggle.signupMode}} class="font-semibold cursor-pointer">sign up</i></h1>
             {{/if}}                        
         </div>
+
 </div>

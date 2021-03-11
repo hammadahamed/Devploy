@@ -1,33 +1,38 @@
 <Home::Layout>
     {{!--  HOME WRAPPER +STARTS+ --}}
-    <div class="grid grid-cols-1 md:grid-cols-5 rounded-lg gap-3 md:mt-2 ">
+    <div class="grid grid-cols-1 md:grid-cols-5 rounded-lg gap-1 md:mt-1 ">
         {{!-- LEFT CONTENT +START+ --}}
-        <div class="bg-gray-50 md:col-span-1 rounded-lg py-2 shadow-inner overflow-clip h-41vh md:h-90vh">
+        <div class="bg-white md:col-span-1 rounded-lg py-2 overflow-clip h-41vh md:h-93vh">
             {{!-- SEARCH FEATURE --}}
             <div class="">
             <SearchBox/>
 
             </div>
             {{!-- REST of the LEFT SHOULD GO INSIDE THIS --}}
-            <div class="px-4 overflow-y-scroll scroller h-30vh md:h-80vh">
-                <Home::Left />
+            <div class="px-4 overflow-y-scroll scroller h-30vh md:h-80vh relative">                
+                <Home::Left @model={{this.model}}/>
             </div>
+
         </div>
         {{!-- LEFT CONTENT +END+ --}}
 
 
         {{!-- RIGHT CONTENT +START+ --}}
-        <div class="bg-gray-50 md:col-span-4 rounded-lg py-1 shadow-inner  h-half md:h-90vh" >
+        <div class="bg-white md:col-span-4 rounded-lg py-1 h-half md:h-93vh" >
             {{!-- REST of the RIGHT SHOULD GO INSIDE THIS --}}
-            <div class="overflow-x-scroll overflow-y-scroll scroller py-3 px-4 scoller h-41vh  md:h-90vh" >
+            <div class="overflow-x-scroll overflow-y-scroll scroller py-3 sm:px-6 scoller h-full  md:h-93vh" >
                 {{!-- <Home::Right />                 --}}
-                {{outlet}}
                     
-                <LinkTo @route="home.right" >
+                                        {{!-- Happy happy --}}
+                                        {{!--  its working   --}}
+
+                {{!-- <LinkTo @route="home.right" @model= {{ this.model.[0] }}>
                 <button class="rounded-full bg-blue-500 text-gray-200 p-3">
                     -> right
                 </button>
-                </LinkTo>
+                </LinkTo> --}}
+                {{outlet}}
+
                 
             </div>             
         </div>
